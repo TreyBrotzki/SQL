@@ -1,2 +1,2 @@
-# potential-parakeet
+# SQL
 SQL Portfolio
