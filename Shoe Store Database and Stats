@@ -1,0 +1,29 @@
+-- Create a database for a shoe store.
+
+CREATE TABLE shoes (id INTEGER PRIMARY KEY, size INTEGER, brand TEXT, price INTEGER, color TEXT, style TEXT);
+
+INSERT INTO shoes VALUES
+(1, 10, "Adidas", 100, "White", "Running"),
+(2, 12, "Nike", 120, "Black", "Running"),
+(3, 11, "Adidas", 150, "White", "Casual"),
+(4, 9, "Adidas", 200, "Brown", "Fancy"),
+(5, 13, "Nike", 80, "White", "Casual"),
+(6, 10, "Adidas", 115, "Black", "Running"),
+(7, 12, "Nike", 95, "Black", "Running"),
+(8, 8, "Nike", 125, "Black", "Casual"),
+(9, 14, "Nike", 220, "White", "Fancy"),
+(10, 10, "Adidas", 60, "Brown", "Casual"),
+(11, 12, "Nike", 100, "Brown", "Running"),
+(12, 9, "Adidas", 130, "White", "Running"),
+(13, 10, "Nike", 195, "White", "Fancy"),
+(14, 10, "Adidas", 155, "Black", "Casual"),
+(15, 10, "Adidas", 105, "Black", "Casual");
+
+-- display the database ordered by price.
+SELECT * FROM shoes ORDER BY price asc;
+
+-- what is the average price of a shoe at the store?
+SELECT AVG(price) FROM shoes;
+
+-- what is the sum of the prices of the differnt shoe styles?
+SELECT style, SUM(price) FROM shoes GROUP BY style;
