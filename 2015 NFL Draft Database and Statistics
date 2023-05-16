@@ -214,11 +214,21 @@ INSERT INTO picks (pick_number, name, college, picked_by, position)
   
 -- display the average pick number and amount of picks for each position.
 	
-SELECT position, ROUND(AVG(pick_number)) AS avg_pick, COUNT(position) AS picks_at_each_position FROM picks GROUP BY position;
+SELECT 
+    position, 
+    ROUND(AVG(pick_number)) AS avg_pick, 
+    COUNT(position) AS picks_at_each_position 
+FROM picks 
+    GROUP BY position;
 
 -- display the average pick number and number of picks from each college.
 
-SELECT college, ROUND(AVG(pick_number)) AS avg_pick, COUNT(college) AS picks_from_each_college FROM picks GROUP BY college;
+SELECT 
+    college, 
+    ROUND(AVG(pick_number)) AS avg_pick, 
+    COUNT(college) AS picks_from_each_college 
+FROM picks 
+    GROUP BY college;
 
 -- group the positions by offense and defense and display the number of picks and average pick number for each.
 
